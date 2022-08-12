@@ -17,7 +17,7 @@ Para realizar peticiones a los endpoints se deberá contar con un token que obte
 
 Al registrarse, el usuario deberá recibir un email y verifique su registro. Es recomendable, la utilización de algún servicio de terceros como nodemailer.
 
-#
+## CRUDS
 
 ### Roles de usuario : client, admin, master
 
