@@ -12,6 +12,7 @@ export const validateTokenRegister = async (req, res, next) => {
 		); /* lanza err si no es valido */
 		const user = await User.findByPk(userId);
 		if (!user) return res.status(401).json({ msg: UNAUTHORIZED });
+		req.user = user;
 		next();
 	} catch (error) {
 		res.status(401).json({ msg: UNAUTHORIZED });

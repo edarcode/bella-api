@@ -1,3 +1,12 @@
-export const verifyRegisterController = (req, res) => {
-	res.json({ msg: "verifyRegisterController" });
+import { VERIFY_USER } from "../../../constants/msgsRes.js";
+
+export const verifyRegisterController = async (req, res, next) => {
+	try {
+		const { user } = req;
+		await user.update({ verify: true });
+		await user.save();
+		res.json({ msg: VERIFY_USER });
+	} catch (error) {
+		next(error);
+	}
 };

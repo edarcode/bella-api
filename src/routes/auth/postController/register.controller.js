@@ -11,6 +11,6 @@ export const registerController = async (req, res, next) => {
 		await sendVerificationEmail(user.email, token);
 		res.status(201).json({ msg: VIRIFY_EMAIL });
 	} catch (error) {
-		next();
+		next(error);
 	}
 };
