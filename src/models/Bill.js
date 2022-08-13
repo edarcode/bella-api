@@ -1,11 +1,11 @@
 import { DataTypes } from "sequelize";
-import { done, pending } from "../constants/billStates.js";
+import { DONE, PENDING } from "../constants/billStates.js";
 
 export const defineBill = sequelize => {
 	sequelize.define("Bill", {
 		state: {
-			type: DataTypes.ENUM(pending, done),
-			defaultValue: pending
+			type: DataTypes.ENUM(PENDING, DONE),
+			defaultValue: PENDING
 		},
 		address: {
 			type: DataTypes.STRING,

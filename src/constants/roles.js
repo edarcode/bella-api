@@ -1,3 +1,3 @@
-export const client = "client";
-export const admin = "admin";
-export const master = "master";
+export const CLIENT = "client";
+export const ADMIN = "admin";
+export const MASTER = "master";

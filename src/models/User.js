@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import { admin, client, master } from "../constants/roles.js";
+import { ADMIN, CLIENT, MASTER } from "../constants/roles.js";
 
 export const defineUser = sequelize => {
 	sequelize.define("User", {
@@ -12,8 +12,8 @@ export const defineUser = sequelize => {
 			defaultValue: false
 		},
 		role: {
-			type: DataTypes.ENUM(client, admin, master),
-			defaultValue: client
+			type: DataTypes.ENUM(CLIENT, ADMIN, MASTER),
+			defaultValue: CLIENT
 		},
 		email: {
 			type: DataTypes.STRING,

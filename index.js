@@ -18,11 +18,11 @@
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import "dotenv/config";
-import db from "./src/db.js";
+import { connDb } from "./src/db.js";
 import server from "./src/server.js";
 
 // Syncing all the models at once..
-db.conn.sync({ force: true }).then(() => {
+connDb.sync({ force: true }).then(() => {
 	server.listen(process.env.PORT, () => {
 		console.log(`Server running on port: ${process.env.PORT} 😎`); // eslint-disable-line no-console
 	});

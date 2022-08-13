@@ -1,2 +1,2 @@
-export const pending = "pedding";
-export const done = "done";
+export const PENDING = "pedding";
+export const DONE = "done";
