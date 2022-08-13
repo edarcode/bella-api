@@ -21,12 +21,15 @@ import "dotenv/config";
 import { transporter } from "./src/config/nodemailer.js";
 import { connDb } from "./src/db.js";
 import server from "./src/server.js";
+import { fillCategory } from "./src/utils/fillCategory.js";
 
 // Syncing all the models at once..
 connDb.sync({ force: true }).then(() => {
 	server.listen(process.env.PORT, async () => {
 		try {
 			await transporter.verify();
+			await fillCategory();
+
 			console.log(`Server running on port: ${process.env.PORT} 😎`); // eslint-disable-line no-console
 		} catch (error) {
 			console.log(error);

@@ -1,6 +1,8 @@
 import { Router } from "express";
-import { createCategoriesController } from "./postController/categories.controller.js";
+import { getAllCategoriesController } from "./getController/getAllCategories.controller.js";
+import { createCategoryController } from "./postController/createCategory.controller.js";
 
 export const categories = Router();
 
-categories.route("/").post(createCategoriesController);
+categories.route("/").post(createCategoryController);
+categories.route("/").get(getAllCategoriesController);
