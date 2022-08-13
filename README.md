@@ -8,30 +8,12 @@ El desarrollo consistirá en crear una base de datos para todos los productos y 
 
 https://lucid.app/lucidchart/6be8e75d-0d57-4354-8885-e1803f91905b/edit?viewport_loc=44%2C-1315%2C2340%2C1174%2C0_0&invitationId=inv_8138d715-115f-41d7-beca-ebcc2a9c8493#
 
-## Autenticación
-
-Para realizar peticiones a los endpoints se deberá contar con un token que obtendrá al autenticarse. Para ello, deberán desarrollarse los endpoints de registro y login, que permitan obtener un token. Los endpoints encargados de la autenticación deberán ser:
-
-- POST /auth/register
-- POST /auth/login
-
-Al registrarse, el usuario deberá recibir un email y verifique su registro. Es recomendable, la utilización de algún servicio de terceros como nodemailer.
-
-## CRUDS
-
-### Roles de usuario : client, admin, master
+### Tener en cuenta roles de usuario : client, admin, master
 
 - POST (admin), salvo facturas (client)
 - GET (admin)
 - DELETE (master)
 - PATCH (master)
-
-### CRUD usuarios
-
-- GET /users (paginado, filtrado y ordenado)
-- GET /users/:id
-- PATCH /users?id=id
-- DELETE /users?id=id
 
 ### CRUD categorias
 
@@ -64,3 +46,19 @@ Al registrarse, el usuario deberá recibir un email y verifique su registro. Es 
 - GET /bills/:id
 - PATCH /bills/:id
 - DELETE /bills/:id
+
+## Autenticación
+
+Para realizar peticiones a los endpoints se deberá contar con un token que obtendrá al autenticarse. Para ello, deberán desarrollarse los endpoints de registro y login, que permitan obtener un token. Los endpoints encargados de la autenticación deberán ser:
+
+- POST /auth/register
+- POST /auth/login
+
+Al registrarse, el usuario deberá recibir un email y verifique su registro. Es recomendable, la utilización de algún servicio de terceros como nodemailer.
+
+### CRUD usuarios
+
+- GET /users (paginado, filtrado y ordenado)
+- GET /users/:id
+- PATCH /users?id=id
+- DELETE /users?id=id
