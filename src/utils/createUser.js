@@ -7,6 +7,5 @@ export const createUser = async ({ email, password }) => {
 		defaults: { password: await encryptPassword(password) }
 	});
 
-	if (!created) return null;
-	return user;
+	return [user, created];
 };
