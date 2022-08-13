@@ -7,3 +7,4 @@ export const ALREADY_EXISTS = "ya existe este recurso";
 export const SUCCESS = "👍";
 export const ERR = "err";
 export const NOT_FOUND = "recurso no encontrado";
+export const DESTROY = "recurso eliminado correctamente";
