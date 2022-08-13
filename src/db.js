@@ -1,4 +1,10 @@
 import { Op, Sequelize } from "sequelize";
+import { defineBill } from "./models/Bill.js";
+import { defineCategory } from "./models/Category.js";
+import { defineDetail } from "./models/Detail.js";
+import { defineImage } from "./models/Image.js";
+import { defineProduct } from "./models/Product.js";
+import { defineSupplier } from "./models/Supplier.js";
 import { defineUser } from "./models/User.js";
 
 const sequelize =
@@ -31,10 +37,49 @@ const sequelize =
 		  );
 
 defineUser(sequelize);
+defineSupplier(sequelize);
+defineImage(sequelize);
+defineProduct(sequelize);
+defineCategory(sequelize);
+defineBill(sequelize);
+defineDetail(sequelize);
 
-const {} = sequelize.models;
+const { Product, Category, Image, Supplier, User, Bill, Detail } =
+	sequelize.models;
 
 // Relaciones
+
+Product.belongsToMany(Category, {
+	as: "categories",
+	through: "ProductCategory",
+	timestamps: false
+});
+Category.belongsToMany(Product, {
+	through: "ProductCategory",
+	timestamps: false
+});
+
+Product.belongsToMany(Image, {
+	as: "images",
+	through: "ProductImage",
+	timestamps: false
+});
+Image.belongsToMany(Product, {
+	through: "ProductImage",
+	timestamps: false
+});
+
+Product.belongsToMany(Supplier, {
+	as: "suppliers",
+	through: "ProductSupplier"
+});
+Supplier.belongsToMany(Product, { through: "ProductSupplier" });
+
+User.hasMany(Bill);
+Bill.belongsTo(User);
+
+Bill.belongsToMany(Product, { through: Detail });
+Product.belongsToMany(Bill, { through: Detail });
 
 export default {
 	Op,
