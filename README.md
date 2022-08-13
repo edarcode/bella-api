@@ -19,7 +19,6 @@ https://lucid.app/lucidchart/6be8e75d-0d57-4354-8885-e1803f91905b/edit?viewport_
 
 - POST /categories
 - GET /categories
-- GET /categories/:id
 - PATCH /categories/:id
 - DELETE /categories/:id
 

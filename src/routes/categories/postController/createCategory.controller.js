@@ -5,7 +5,7 @@ export const createCategoryController = async (req, res, next) => {
 	try {
 		const category = await createCategory(req.body);
 		if (!category) return res.status(200).json({ msg: ALREADY_EXISTS });
-		res.json({ msg: SUCCESS });
+		res.status(201).json({ msg: SUCCESS });
 	} catch (error) {
 		next(error);
 	}
