@@ -8,7 +8,7 @@ El desarrollo consistirá en crear una base de datos para todos los productos y 
 
 https://lucid.app/lucidchart/6be8e75d-0d57-4354-8885-e1803f91905b/edit?viewport_loc=44%2C-1315%2C2340%2C1174%2C0_0&invitationId=inv_8138d715-115f-41d7-beca-ebcc2a9c8493#
 
-### Tener en cuenta roles de usuario : client, admin, master
+### Tener en cuenta los roles de usuario : client, admin, master
 
 - POST (admin), salvo facturas (client)
 - GET (admin)
