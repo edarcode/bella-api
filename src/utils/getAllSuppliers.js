@@ -1,6 +1,6 @@
 import { Op } from "sequelize";
 import { SUPPLIERS_PER_PAGE } from "../constants/perPage.js";
-import { Supplier } from "../dbRelations.js";
+import { Product, Supplier } from "../dbRelations.js";
 
 export const getAllSuppliers = async params => {
 	const { page = 0, suppliersPerPage = SUPPLIERS_PER_PAGE, order } = params;
@@ -10,7 +10,8 @@ export const getAllSuppliers = async params => {
 		offset: perPage * page,
 		limit: perPage,
 		attributes: ["id", "name", "tell", "email", "active", "img"],
-		order: (order && [JSON.parse(order)]) || [] // order debe ser una cadena de la forma ["colum","valor"]
+		order: (order && [JSON.parse(order)]) || [], // order debe ser una cadena de la forma ["colum","valor"]
+		include: include(params)
 	});
 	if (!rows.length) return null;
 	const dataSuppliers = {
@@ -32,4 +33,16 @@ const where = ({ name, tell, email, active }) => {
 	if (active) result.active = active;
 
 	return result;
+};
+const include = ({ product }) => {
+	if (!product) return [];
+	return [
+		{
+			model: Product,
+			as: "products",
+			where: { id: product },
+			attributes: [],
+			through: { attributes: [] }
+		}
+	];
 };
