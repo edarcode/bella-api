@@ -46,6 +46,7 @@ Product.belongsToMany(Supplier, {
 	timestamps: false
 });
 Supplier.belongsToMany(Product, {
+	as: "products",
 	through: "ProductSupplier",
 	timestamps: false
 });

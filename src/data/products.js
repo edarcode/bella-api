@@ -1,7 +1,7 @@
 export const products = [
 	{
 		stock: 100,
-		name: "blue jeans",
+		name: "blue jean",
 		buyPrice: 30000,
 		salePrice: 80000,
 		description: "Pantalones azules para hombre",
