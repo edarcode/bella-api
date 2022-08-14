@@ -42,9 +42,13 @@ Image.belongsToMany(Product, {
 
 Product.belongsToMany(Supplier, {
 	as: "suppliers",
-	through: "ProductSupplier"
+	through: "ProductSupplier",
+	timestamps: false
 });
-Supplier.belongsToMany(Product, { through: "ProductSupplier" });
+Supplier.belongsToMany(Product, {
+	through: "ProductSupplier",
+	timestamps: false
+});
 
 User.hasMany(Bill);
 Bill.belongsTo(User);
