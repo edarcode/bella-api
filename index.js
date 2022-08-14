@@ -22,6 +22,7 @@ import { transporter } from "./src/config/nodemailer.js";
 import { connDb } from "./src/db.js";
 import server from "./src/server.js";
 import { fillCategory } from "./src/utils/fillCategory.js";
+import { fillProduct } from "./src/utils/fillProduct.js";
 import { fillSupplier } from "./src/utils/fillSupplier.js";
 
 // Syncing all the models at once..
@@ -31,6 +32,7 @@ connDb.sync({ force: true }).then(() => {
 			await transporter.verify();
 			await fillCategory();
 			await fillSupplier();
+			await fillProduct();
 
 			console.log(`Server running on port: ${process.env.PORT} 😎`); // eslint-disable-line no-console
 		} catch (error) {
