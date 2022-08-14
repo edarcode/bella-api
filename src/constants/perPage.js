@@ -1,1 +1,1 @@
-export const suppliersPerPage = 3;
+export const SUPPLIERS_PER_PAGE = 3;

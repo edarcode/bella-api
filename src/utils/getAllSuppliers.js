@@ -1,9 +1,10 @@
 import { Op } from "sequelize";
-import { suppliersPerPage } from "../constants/perPage.js";
+import { SUPPLIERS_PER_PAGE } from "../constants/perPage.js";
 import { Supplier } from "../dbRelations.js";
 
 export const getAllSuppliers = async params => {
-	const { page = 0, perPage = suppliersPerPage, order } = params;
+	const { page = 0, suppliersPerPage = SUPPLIERS_PER_PAGE, order } = params;
+	const perPage = Number(suppliersPerPage);
 	const { count, rows } = await Supplier.findAndCountAll({
 		where: where(params),
 		offset: perPage * page,
@@ -15,7 +16,7 @@ export const getAllSuppliers = async params => {
 	const dataSuppliers = {
 		suppliersCount: count,
 		pageCount: Math.ceil(count / perPage),
-		suppliersPerPAge: perPage,
+		suppliersPerPage: perPage,
 		page: parseInt(page),
 		suppliers: rows
 	};
