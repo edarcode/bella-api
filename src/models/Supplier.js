@@ -4,7 +4,7 @@ export const defineSupplier = sequelize => {
 	sequelize.define("Supplier", {
 		active: {
 			type: DataTypes.BOOLEAN,
-			allowNull: false
+			defaultValue: true
 		},
 		name: {
 			type: DataTypes.STRING,
@@ -12,7 +12,8 @@ export const defineSupplier = sequelize => {
 		},
 		tell: {
 			type: DataTypes.BIGINT,
-			allowNull: false
+			allowNull: false,
+			unique: true
 		},
 		email: {
 			type: DataTypes.STRING,
@@ -21,6 +22,12 @@ export const defineSupplier = sequelize => {
 				isEmail: true
 			},
 			unique: true
+		},
+		img: {
+			type: DataTypes.STRING,
+			validator: {
+				isUrl: true
+			}
 		}
 	});
 };
