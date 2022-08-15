@@ -20,7 +20,8 @@ export const getAllProducts = async params => {
 			"description"
 		],
 		order: (order && [JSON.parse(order)]) || [], // order debe ser una cadena de la forma ["colum","valor"]
-		include: include(params)
+		include: include(params),
+		distinct: true
 	});
 	if (!rows.length) return null;
 	const dataProducts = {

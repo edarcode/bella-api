@@ -11,7 +11,8 @@ export const getAllSuppliers = async params => {
 		limit: perPage,
 		attributes: ["id", "name", "tell", "email", "active", "img"],
 		order: (order && [JSON.parse(order)]) || [], // order debe ser una cadena de la forma ["colum","valor"]
-		include: include(params)
+		include: include(params),
+		distinct: true
 	});
 	if (!rows.length) return null;
 	const dataSuppliers = {

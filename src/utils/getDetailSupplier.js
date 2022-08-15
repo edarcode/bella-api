@@ -12,6 +12,7 @@ export const getDetailSupplier = async id => {
 			}
 		]
 	});
+	if (!supplier) return null;
 
 	return supplier;
 };
