@@ -1,14 +1,15 @@
 import { Sequelize } from "sequelize";
+import { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER } from "./env/db.js";
 
 export const connDb =
 	process.env.NODE_ENV === "production"
 		? new Sequelize({
-				database: process.env.DB_NAME,
+				database: DB_NAME,
 				dialect: "postgres",
-				host: process.env.DB_HOST,
+				host: DB_HOST,
 				port: 5432,
-				username: process.env.DB_USER,
-				password: process.env.DB_PASSWORD,
+				username: DB_USER,
+				password: DB_PASSWORD,
 				pool: {
 					max: 3,
 					min: 1,
@@ -25,6 +26,6 @@ export const connDb =
 				ssl: true
 		  })
 		: new Sequelize(
-				`postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_NAME}`,
+				`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
 				{ logging: false, native: false }
 		  );

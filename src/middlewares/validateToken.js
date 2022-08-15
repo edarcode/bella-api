@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import { NO_TOKEN, UNAUTHORIZED } from "../constants/msgsRes.js";
 import { User } from "../dbRelations.js";
+import { SECRET } from "../env/secret.js";
 
 export const validateToken = async (req, res, next) => {
 	try {
@@ -8,7 +9,7 @@ export const validateToken = async (req, res, next) => {
 		if (!token) return res.status(400).json({ msg: NO_TOKEN });
 		const { userId } = jwt.verify(
 			token,
-			process.env.SECRET
+			SECRET
 		); /* lanza err si no es valido */
 		const user = await User.findByPk(userId);
 		if (!user) return res.status(401).json({ msg: UNAUTHORIZED });
