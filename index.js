@@ -21,6 +21,7 @@ import "dotenv/config";
 import { transporter } from "./src/config/nodemailer.js";
 import { connDb } from "./src/db.js";
 import server from "./src/server.js";
+import { createMaster } from "./src/utils/createMaster.js";
 import { fillCategory } from "./src/utils/fillCategory.js";
 import { fillProduct } from "./src/utils/fillProduct.js";
 import { fillSupplier } from "./src/utils/fillSupplier.js";
@@ -30,6 +31,7 @@ connDb.sync({ force: true }).then(() => {
 	server.listen(process.env.PORT, async () => {
 		try {
 			await transporter.verify();
+			await createMaster();
 			await fillCategory();
 			await fillSupplier();
 			await fillProduct();
