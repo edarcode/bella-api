@@ -8,3 +8,5 @@ export const SUCCESS = "👍";
 export const ERR = "err";
 export const NOT_FOUND = "recurso no encontrado";
 export const DESTROY = "recurso eliminado correctamente";
+export const REQUIRE_MASTER = "se requiere rol Master";
+export const REQUIRE_ADMIN = "se requiere rol Admin";
