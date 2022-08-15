@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { auth } from "./auth/auth.router.js";
+import { bills } from "./bills/bills.router.js";
 import { categories } from "./categories/categories.router.js";
 import { products } from "./products/products.router.js";
 import { suppliers } from "./suppliers/suppliers.router.js";
@@ -12,3 +13,4 @@ router.use("/users", users);
 router.use("/categories", categories);
 router.use("/suppliers", suppliers);
 router.use("/products", products);
+router.use("/bills", bills);

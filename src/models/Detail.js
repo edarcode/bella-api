@@ -6,7 +6,7 @@ export const defineDetail = sequelize => {
 			type: DataTypes.INTEGER,
 			allowNull: false
 		},
-		buyPrice: {
+		salePrice: {
 			type: DataTypes.REAL,
 			allowNull: false
 		}
