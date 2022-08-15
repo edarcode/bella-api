@@ -36,6 +36,7 @@ Product.belongsToMany(Image, {
 	timestamps: false
 });
 Image.belongsToMany(Product, {
+	as: "products",
 	through: "ProductImage",
 	timestamps: false
 });
