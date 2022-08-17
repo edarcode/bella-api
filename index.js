@@ -22,6 +22,7 @@ import { transporter } from "./src/config/nodemailer.js";
 import { connDb } from "./src/db.js";
 import server from "./src/server.js";
 import { createMaster } from "./src/utils/createMaster.js";
+import { fillBill } from "./src/utils/fillBill.js";
 import { fillCategory } from "./src/utils/fillCategory.js";
 import { fillProduct } from "./src/utils/fillProduct.js";
 import { fillSupplier } from "./src/utils/fillSupplier.js";
@@ -35,6 +36,7 @@ connDb.sync({ force: true }).then(() => {
 			await fillCategory();
 			await fillSupplier();
 			await fillProduct();
+			await fillBill();
 
 			console.log(`Server running on port: ${process.env.PORT} 😎`); // eslint-disable-line no-console
 		} catch (error) {
