@@ -45,7 +45,7 @@ const include = ({ categoryId }) => {
 		}
 	];
 	if (categoryId) {
-		include.push({
+		arrInclide.push({
 			model: Category,
 			as: "categories",
 			where: { id: categoryId },

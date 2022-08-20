@@ -1,6 +1,6 @@
 import { Op } from "sequelize";
 import { PRODUCTS_PER_PAGE } from "../constants/perPage.js";
-import { Category, Product } from "../dbRelations.js";
+import { Category, Image, Product } from "../dbRelations.js";
 
 export const getAllProducts = async params => {
 	const { page = 0, productsPerPage = PRODUCTS_PER_PAGE, order } = params;
@@ -48,14 +48,21 @@ const where = ({ active, name, minSalePrice, maxSalePrice }) => {
 	return result;
 };
 const include = ({ categoryId }) => {
-	if (!categoryId) return [];
-	return [
+	const arrInclide = [
 		{
+			model: Image,
+			as: "images",
+			through: { attributes: [] }
+		}
+	];
+	if (categoryId) {
+		arrInclide.push({
 			model: Category,
 			as: "categories",
 			where: { id: categoryId },
 			attributes: [],
 			through: { attributes: [] }
-		}
-	];
+		});
+	}
+	return arrInclide;
 };
