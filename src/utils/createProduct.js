@@ -5,6 +5,7 @@ import { destroyTuple } from "./destroyTuple.js";
 export const createProduct = async ({
 	stock,
 	name,
+	subName,
 	buyPrice,
 	salePrice,
 	description,
@@ -14,7 +15,7 @@ export const createProduct = async ({
 }) => {
 	const [product, created] = await Product.findOrCreate({
 		where: { name },
-		defaults: { stock, buyPrice, salePrice, description }
+		defaults: { subName, stock, buyPrice, salePrice, description }
 	});
 	if (!created) return null;
 	try {

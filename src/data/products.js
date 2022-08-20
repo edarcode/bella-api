@@ -2,6 +2,7 @@ export const products = [
 	{
 		stock: 100,
 		name: "blue jean",
+		subName: "Súper cómodos 👖",
 		buyPrice: 30000,
 		salePrice: 80000,
 		description: "Pantalones azules para hombre",
@@ -14,6 +15,7 @@ export const products = [
 	{
 		stock: 50,
 		name: "lola",
+		subName: "🤘",
 		buyPrice: 20000,
 		salePrice: 60000,
 		description: "Shorts para mujer",
@@ -26,6 +28,7 @@ export const products = [
 	{
 		stock: 40,
 		name: "filipo",
+		subName: "👻",
 		buyPrice: 20000,
 		salePrice: 60000,
 		description: "Shorts para hombre",
@@ -38,6 +41,7 @@ export const products = [
 	{
 		stock: 50,
 		name: "krapuza",
+		subName: "😎",
 		buyPrice: 20000,
 		salePrice: 60000,
 		description: "Shorts para mujer",
@@ -50,6 +54,7 @@ export const products = [
 	{
 		stock: 150,
 		name: "marte",
+		subName: "💪",
 		buyPrice: 180000,
 		salePrice: 300000,
 		description: "Zapatos unisex para acampar",
@@ -62,6 +67,7 @@ export const products = [
 	{
 		stock: 120,
 		name: "capitos",
+		subName: "👍",
 		buyPrice: 50000,
 		salePrice: 110000,
 		description: "Zapatos casuales para hombre",
@@ -74,6 +80,7 @@ export const products = [
 	{
 		stock: 200,
 		name: "nike",
+		subName: "🏀",
 		buyPrice: 200000,
 		salePrice: 400000,
 		description: "Zapatos deportivos para hombre",
@@ -86,6 +93,7 @@ export const products = [
 	{
 		stock: 80,
 		name: "lifa",
+		subName: "🤓",
 		buyPrice: 100000,
 		salePrice: 150000,
 		description: "Camisa para mujer, súper comoda",
@@ -98,6 +106,7 @@ export const products = [
 	{
 		stock: 80,
 		name: "relax",
+		subName: "👔",
 		buyPrice: 50000,
 		salePrice: 90000,
 		description: "Camisa casual para hombre",
@@ -110,6 +119,7 @@ export const products = [
 	{
 		stock: 45,
 		name: "smoke",
+		subName: "👔",
 		buyPrice: 50000,
 		salePrice: 90000,
 		description: "Camisa casual para hombre",
@@ -122,6 +132,7 @@ export const products = [
 	{
 		stock: 70,
 		name: "glamure",
+		subName: "😳",
 		buyPrice: 100000,
 		salePrice: 200000,
 		description: "Falda formal para mujer",
@@ -134,6 +145,7 @@ export const products = [
 	{
 		stock: 70,
 		name: "catrina",
+		subName: "😳",
 		buyPrice: 60000,
 		salePrice: 120000,
 		description: "Falda casual para mujer",
@@ -146,6 +158,7 @@ export const products = [
 	{
 		stock: 60,
 		name: "cuorer",
+		subName: "😯",
 		buyPrice: 80000,
 		salePrice: 150000,
 		description: "Falda casual de cuero para mujer",

@@ -14,6 +14,7 @@ export const getAllProducts = async params => {
 			"active",
 			"stock",
 			"name",
+			"subName",
 			"buyPrice",
 			"salePrice",
 			"discount",

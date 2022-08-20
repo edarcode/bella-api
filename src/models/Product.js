@@ -18,6 +18,9 @@ export const defineProduct = sequelize => {
 			allowNull: false,
 			unique: true
 		},
+		subName: {
+			type: DataTypes.STRING
+		},
 		buyPrice: {
 			type: DataTypes.REAL,
 			allowNull: false,
