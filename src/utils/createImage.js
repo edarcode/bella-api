@@ -1,8 +1,13 @@
 import { Image } from "../dbRelations.js";
 
-export const createImage = async ({ img }) => {
+export const createImage = async ({ small, medium, big, original }) => {
 	const [image, created] = await Image.findOrCreate({
-		where: { img }
+		where: { small },
+		defaults: {
+			medium,
+			big,
+			original
+		}
 	});
 	if (!created) return null;
 

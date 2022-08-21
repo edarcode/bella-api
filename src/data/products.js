@@ -8,7 +8,15 @@ export const products = [
 		description: "Pantalones azules para hombre",
 		categories: [5],
 		images: [
-			"https://res.cloudinary.com/dvmsllkkg/image/upload/v1660489220/bella/products/blue_jeans_p8sklj.webp"
+			{
+				original:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661051602/bella/products/blue-jean-orignal_wwq1bl.webp",
+				big: "https://res.cloudinary.com/dvmsllkkg/image/upload/v1661051600/bella/products/blue-jean-big_geinfg.webp",
+				medium:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661051600/bella/products/blue-jean-medium_ivfock.webp",
+				small:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661051600/bella/products/blue-jean-small_qrt14m.webp"
+			}
 		],
 		suppliers: [1, 2]
 	},
@@ -21,7 +29,15 @@ export const products = [
 		description: "Shorts para mujer",
 		categories: [1],
 		images: [
-			"https://res.cloudinary.com/dvmsllkkg/image/upload/v1660493668/bella/products/lola_zpoysq.webp"
+			{
+				original:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661055040/bella/products/lola-original_jt33rm.webp",
+				big: "https://res.cloudinary.com/dvmsllkkg/image/upload/v1661055037/bella/products/lola-big_z4kzih.webp",
+				medium:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661055036/bella/products/lola-medium_lamnb8.webp",
+				small:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661055036/bella/products/lola-small_kaaypg.webp"
+			}
 		],
 		suppliers: [1, 2]
 	},
@@ -34,7 +50,15 @@ export const products = [
 		description: "Shorts para hombre",
 		categories: [1],
 		images: [
-			"https://res.cloudinary.com/dvmsllkkg/image/upload/v1660493668/bella/products/filipo_cttjrb.webp"
+			{
+				original:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661054529/bella/products/filipo-original_isdib0.webp",
+				big: "https://res.cloudinary.com/dvmsllkkg/image/upload/v1661054526/bella/products/filipo-big_qjwygi.webp",
+				medium:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661054526/bella/products/filipo-medium_dpyt8y.webp",
+				small:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661054525/bella/products/filipo-original-small_kdipql.webp"
+			}
 		],
 		suppliers: [1, 2]
 	},
@@ -47,20 +71,36 @@ export const products = [
 		description: "Shorts para mujer",
 		categories: [1],
 		images: [
-			"https://res.cloudinary.com/dvmsllkkg/image/upload/v1660493668/bella/products/krapuza_eyq3jw.webp"
+			{
+				original:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661055630/bella/products/krapuza-original_e8tey8.webp",
+				big: "https://res.cloudinary.com/dvmsllkkg/image/upload/v1661055627/bella/products/krapuza-big_vqx5jw.webp",
+				medium:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661055627/bella/products/krapuza-medium_eythoa.webp",
+				small:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661055627/bella/products/krapuza-small_poc51w.webp"
+			}
 		],
 		suppliers: [1, 2]
 	},
 	{
 		stock: 150,
 		name: "marte",
-		subName: "💪",
+		subName: "👞",
 		buyPrice: 180000,
 		salePrice: 300000,
-		description: "Zapatos unisex para acampar",
+		description: "Zapatos formal de cuero",
 		categories: [2],
 		images: [
-			"https://res.cloudinary.com/dvmsllkkg/image/upload/v1660494551/bella/products/marte_vspz5i.webp"
+			{
+				original:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661056870/bella/products/marte-original_vda6jh.webp",
+				big: "https://res.cloudinary.com/dvmsllkkg/image/upload/v1661056869/bella/products/marte-big_ackult.webp",
+				medium:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661056869/bella/products/marte-medium_um6upi.webp",
+				small:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661056869/bella/products/marte-small_n4tlsi.webp"
+			}
 		],
 		suppliers: [3]
 	},
@@ -73,7 +113,15 @@ export const products = [
 		description: "Zapatos casuales para hombre",
 		categories: [2],
 		images: [
-			"https://res.cloudinary.com/dvmsllkkg/image/upload/v1660494551/bella/products/capitos_hcx7jb.webp"
+			{
+				original:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661057267/bella/products/capitos-original_bu3kir.webp",
+				big: "https://res.cloudinary.com/dvmsllkkg/image/upload/v1661057266/bella/products/capitos-big_ysz0no.webp",
+				medium:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661057266/bella/products/capitos-medium_kxuumx.webp",
+				small:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661057266/bella/products/capitos-small_jk0asv.webp"
+			}
 		],
 		suppliers: [3]
 	},
@@ -86,46 +134,57 @@ export const products = [
 		description: "Zapatos deportivos para hombre",
 		categories: [2],
 		images: [
-			"https://res.cloudinary.com/dvmsllkkg/image/upload/v1660494551/bella/products/nike_iccwcw.webp"
+			{
+				original:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661057568/bella/products/nike-original_plnbgc.webp",
+				big: "https://res.cloudinary.com/dvmsllkkg/image/upload/v1661057568/bella/products/nike-big_rg7ub3.webp",
+				medium:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661057568/bella/products/nike-medium_hafjp3.webp",
+				small:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661057567/bella/products/nike-small_kyuf2b.webp"
+			}
 		],
 		suppliers: [3]
 	},
 	{
 		stock: 80,
-		name: "lifa",
+		name: "babilo",
 		subName: "🤓",
 		buyPrice: 100000,
 		salePrice: 150000,
-		description: "Camisa para mujer, súper comoda",
-		categories: [3],
+		description: "Camisa para hombre, súper comoda",
+		categories: [6],
 		images: [
-			"https://res.cloudinary.com/dvmsllkkg/image/upload/v1660495298/bella/products/lifa_e9lt3q.webp"
+			{
+				original:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661059019/bella/products/babilo-original_e7uhmu.webp",
+				big: "https://res.cloudinary.com/dvmsllkkg/image/upload/v1661059002/bella/products/babilo-big_bjwnac.webp",
+				medium:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661059002/bella/products/babilo-medium_jn1b2m.webp",
+				small:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661059002/bella/products/babilo-small_nuxenp.webp"
+			}
 		],
 		suppliers: [4]
 	},
 	{
 		stock: 80,
-		name: "relax",
+		name: "formuto",
 		subName: "👔",
 		buyPrice: 50000,
 		salePrice: 90000,
 		description: "Camisa casual para hombre",
 		categories: [3],
 		images: [
-			"https://res.cloudinary.com/dvmsllkkg/image/upload/v1660495297/bella/products/relax_qcgywl.webp"
-		],
-		suppliers: [4]
-	},
-	{
-		stock: 45,
-		name: "smoke",
-		subName: "👔",
-		buyPrice: 50000,
-		salePrice: 90000,
-		description: "Camisa casual para hombre",
-		categories: [3],
-		images: [
-			"https://res.cloudinary.com/dvmsllkkg/image/upload/v1660495297/bella/products/smoke_bp0zyn.webp"
+			{
+				original:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661059809/bella/products/formuto-original_pstvtb.webp",
+				big: "https://res.cloudinary.com/dvmsllkkg/image/upload/v1661059808/bella/products/formuto-big_cyoabb.webp",
+				medium:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661059808/bella/products/formuto-medium_srxv9n.webp",
+				small:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661059808/bella/products/formuto-small_wxguwk.webp"
+			}
 		],
 		suppliers: [4]
 	},
@@ -138,33 +197,15 @@ export const products = [
 		description: "Falda formal para mujer",
 		categories: [4],
 		images: [
-			"https://res.cloudinary.com/dvmsllkkg/image/upload/v1660496072/bella/products/glamure_uanwu0.webp"
-		],
-		suppliers: [4]
-	},
-	{
-		stock: 70,
-		name: "catrina",
-		subName: "😳",
-		buyPrice: 60000,
-		salePrice: 120000,
-		description: "Falda casual para mujer",
-		categories: [4],
-		images: [
-			"https://res.cloudinary.com/dvmsllkkg/image/upload/v1660496072/bella/products/catrina_q1m3ms.webp"
-		],
-		suppliers: [4]
-	},
-	{
-		stock: 60,
-		name: "cuorer",
-		subName: "😯",
-		buyPrice: 80000,
-		salePrice: 150000,
-		description: "Falda casual de cuero para mujer",
-		categories: [4],
-		images: [
-			"https://res.cloudinary.com/dvmsllkkg/image/upload/v1660496072/bella/products/cuorer_bnhwjc.webp"
+			{
+				original:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661062416/bella/products/glamure-original_qpgoma.webp",
+				big: "https://res.cloudinary.com/dvmsllkkg/image/upload/v1661062415/bella/products/glamure-big_y5542k.webp",
+				medium:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661062415/bella/products/glamure-medium_shj7qx.webp",
+				small:
+					"https://res.cloudinary.com/dvmsllkkg/image/upload/v1661062415/bella/products/glamure-small_x8zm7k.webp"
+			}
 		],
 		suppliers: [4]
 	}

@@ -18,5 +18,9 @@ export const categories = [
 	{
 		name: "jeans",
 		img: "https://res.cloudinary.com/dvmsllkkg/image/upload/v1660489602/bella/categories/jeans_klqfis.webp"
+	},
+	{
+		name: "t-shirt",
+		img: "https://res.cloudinary.com/dvmsllkkg/image/upload/v1661058715/bella/categories/t-shirt_vjxuge.webp"
 	}
 ];

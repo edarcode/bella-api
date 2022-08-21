@@ -4,7 +4,31 @@ export const defineImage = sequelize => {
 	sequelize.define(
 		"Image",
 		{
-			img: {
+			small: {
+				type: DataTypes.STRING,
+				allowNull: false,
+				unique: true,
+				validate: {
+					isUrl: true
+				}
+			},
+			medium: {
+				type: DataTypes.STRING,
+				allowNull: false,
+				unique: true,
+				validate: {
+					isUrl: true
+				}
+			},
+			big: {
+				type: DataTypes.STRING,
+				allowNull: false,
+				unique: true,
+				validate: {
+					isUrl: true
+				}
+			},
+			original: {
 				type: DataTypes.STRING,
 				allowNull: false,
 				unique: true,

@@ -7,7 +7,6 @@ export const getDetailProduct = async id => {
 			{
 				model: Image,
 				as: "images",
-				attributes: ["id", "img"],
 				through: { attributes: [] }
 			},
 			{
