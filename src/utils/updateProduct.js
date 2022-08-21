@@ -1,5 +1,6 @@
-import { Image, Product } from "../dbRelations.js";
+import { Product } from "../dbRelations.js";
 import { createProductImages } from "./createProductImages.js";
+import { deleteProductImgs } from "./deleteProductImgs.js";
 
 export const updateProduct = async (
 	id,
@@ -29,17 +30,7 @@ export const updateProduct = async (
 	});
 
 	if (images && images.length) {
-		await Image.destroy({
-			truncate: true,
-			cascade: true,
-			include: [
-				{
-					model: Product,
-					as: "products",
-					where: { id: product.id }
-				}
-			]
-		});
+		await deleteProductImgs(product.id);
 		const imageIds = await createProductImages(images);
 		await product.setImages(imageIds);
 	}
