@@ -1,3 +1,4 @@
+import { BAD_CREDENTIALS } from "../constants/msgsRes.js";
 import { User } from "../dbRelations.js";
 import { comparePassword } from "./comparePassword.js";
 
@@ -8,7 +9,7 @@ export const loginUser = async ({ email, password }) => {
 	});
 	if (!user) return null;
 	const isRightPassword = await comparePassword(password, user.password);
-	if (!isRightPassword) return null;
+	if (!isRightPassword) return BAD_CREDENTIALS;
 
 	return user;
 };

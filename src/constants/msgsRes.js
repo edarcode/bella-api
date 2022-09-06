@@ -11,3 +11,7 @@ export const REQUIRE_MASTER = "Requiere rol Master";
 export const REQUIRE_ADMIN = "Requiere rol Admin";
 export const EMAIL_UNAVAILABLE = "Correo electrónico no disponible";
 export const REQUIRE_EMAIL_AND_PASS = "Requiere usuario y contraseña";
+export const UNREGISTERED_USER = "Usuario no registrado";
+export const USER_NOT_VERIFIED = "Usuario no verificado";
+export const USER_NOT_ACTIVE = "Usuario no activo";
+export const BAD_CREDENTIALS = "Credenciales incorrectas";
