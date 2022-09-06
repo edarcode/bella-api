@@ -1,4 +1,5 @@
-export const VIRIFY_EMAIL = "Revise su correo para verificar el registro";
+export const VIRIFY_EMAIL =
+	"Recuerde verificar el registro dando clic en el enlace enviado a su correo 🍺";
 export const NO_TOKEN = "Requiere un token";
 export const UNAUTHORIZED = "No autorizado";
 export const SUCCESSFUL_REGISTRATION = "Registro exitoso";
