@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize";
-import { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER } from "./env/db.js";
+import { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, PORT } from "./env/db.js";
 
 export const connDb =
 	process.env.NODE_ENV === "production"
@@ -7,7 +7,7 @@ export const connDb =
 				database: DB_NAME,
 				dialect: "postgres",
 				host: DB_HOST,
-				port: 5432,
+				port: PORT,
 				username: DB_USER,
 				password: DB_PASSWORD,
 				pool: {
