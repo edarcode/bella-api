@@ -5,6 +5,6 @@ import { getAllUsersController } from "./getController/getAllUsers.controller.js
 
 export const users = Router();
 
-const middlewares = [validateToken, validateRoleAdmin];
+const middlewaresAdmin = [validateToken, validateRoleAdmin];
 
-users.route("/").get(middlewares, getAllUsersController);
+users.route("/").get(middlewaresAdmin, getAllUsersController);

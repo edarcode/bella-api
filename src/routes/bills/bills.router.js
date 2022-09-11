@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { validateRoleMaster } from "../../middlewares/validateRoleMaster.js";
+import { validateRoleAdmin } from "../../middlewares/validateRoleAdmin.js";
 import { validateToken } from "../../middlewares/validateToken.js";
 import { createBillController } from "./postController/createBill.controller.js";
 export const bills = Router();
 
-const middlewares = [validateToken, validateRoleMaster];
+const middlewaresAdmin = [validateToken, validateRoleAdmin];
 
-bills.route("/").post(middlewares, createBillController);
+bills.route("/").post(middlewaresAdmin, createBillController);
