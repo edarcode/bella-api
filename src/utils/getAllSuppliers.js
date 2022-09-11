@@ -35,13 +35,13 @@ const where = ({ name, tell, email, active }) => {
 
 	return result;
 };
-const include = ({ product }) => {
-	if (!product) return [];
+const include = ({ productId }) => {
+	if (!productId) return [];
 	return [
 		{
 			model: Product,
 			as: "products",
-			where: { id: product },
+			where: { id: productId },
 			attributes: [],
 			through: { attributes: [] }
 		}
