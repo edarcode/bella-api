@@ -6,7 +6,6 @@ export const defineImage = sequelize => {
 		{
 			small: {
 				type: DataTypes.STRING,
-				allowNull: false,
 				unique: true,
 				validate: {
 					isUrl: true
@@ -14,7 +13,6 @@ export const defineImage = sequelize => {
 			},
 			medium: {
 				type: DataTypes.STRING,
-				allowNull: false,
 				unique: true,
 				validate: {
 					isUrl: true
@@ -22,7 +20,6 @@ export const defineImage = sequelize => {
 			},
 			big: {
 				type: DataTypes.STRING,
-				allowNull: false,
 				unique: true,
 				validate: {
 					isUrl: true

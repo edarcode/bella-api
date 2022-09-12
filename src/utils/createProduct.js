@@ -24,6 +24,7 @@ export const createProduct = async ({
 		const imageIds = await createProductImages(images);
 		await product.setImages(imageIds);
 	} catch (error) {
+		console.log(error);
 		await destroyTuple(Product, product.id);
 		return null;
 	}
