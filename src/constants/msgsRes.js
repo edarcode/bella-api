@@ -16,3 +16,4 @@ export const UNREGISTERED_USER = "Usuario no registrado";
 export const USER_NOT_VERIFIED = "Usuario no verificado";
 export const USER_NOT_ACTIVE = "Usuario no activo";
 export const BAD_CREDENTIALS = "Credenciales incorrectas";
+export const SUCCESS_CREATED_PRODUCT = "Producto creado con éxito 👍";
