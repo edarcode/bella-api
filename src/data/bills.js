@@ -59,52 +59,8 @@ export const bills = [
 			{
 				productId: 5,
 				amount: 4
-			},
-			{
-				productId: 7,
-				amount: 2
-			},
-			{
-				productId: 8,
-				amount: 1
 			}
 		],
 		tell: 3015554433
-	},
-	{
-		address: "cr66 #65-12",
-		details: [
-			{
-				productId: 9,
-				amount: 2
-			},
-			{
-				productId: 10,
-				amount: 2
-			},
-			{
-				productId: 13,
-				amount: 1
-			}
-		],
-		tell: 3012226633
-	},
-	{
-		address: "cr46 #15-11",
-		details: [
-			{
-				productId: 9,
-				amount: 2
-			},
-			{
-				productId: 2,
-				amount: 2
-			},
-			{
-				productId: 4,
-				amount: 1
-			}
-		],
-		tell: 3012226677
 	}
 ];
