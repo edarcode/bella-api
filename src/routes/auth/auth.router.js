@@ -10,7 +10,7 @@ export const auth = Router();
 
 auth.route("/register").post(registerController);
 auth
-	.route("/register/verify")
+	.route("/verify-register")
 	.get(validateTokenRegister, verifyRegisterController);
 auth.route("/login").post(loginController);
-auth.route("/token/verify").post(validateToken, verifyTokenController);
+auth.route("/verify-token").post(validateToken, verifyTokenController);
